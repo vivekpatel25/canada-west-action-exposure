@@ -23,7 +23,6 @@
 }
 
 * { box-sizing:border-box; }
-
 html { scroll-behavior:smooth; }
 
 body {
@@ -203,24 +202,6 @@ figcaption {
   font-size:.88rem;
   color:var(--muted);
   padding:12px 3px 0;
-}
-
-.chart-title {
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:12px;
-  margin:0 0 10px;
-}
-
-.tag {
-  font-size:.74rem;
-  font-weight:800;
-  color:#37688f;
-  background:var(--pale);
-  border-radius:30px;
-  padding:5px 9px;
-  white-space:nowrap;
 }
 
 .position-grid {
@@ -482,12 +463,42 @@ footer p {
       1,038 team-set appearances.
     </p>
 
-    <div class="callout">
-      <strong>Study-defined jump/action estimate:</strong>
-      For the workload comparison, each coded Attack, Block,
-      Serve and Set action is counted as one jump-equivalent action.
-      This is the study's operational assumption, not a directly
-      observed physical jump count.
+    <div class="callout" style="margin-top:17px">
+
+      <strong>Important distinction – coded actions versus physical jumps:</strong>
+      This study assigns one jump-equivalent to each recorded Attack,
+      Block, Serve and Set action. However, these are coded volleyball
+      actions, not individually verified jumps.
+
+      <ul class="bullet-list">
+
+        <li>
+          An attack is counted once, whether the attacker jumps or
+          performs a standing attack.
+        </li>
+
+        <li>
+          A set is counted as one action, whether the setter jumps
+          to set or sets from a standing position.
+        </li>
+
+        <li>
+          When multiple blockers jump together, the coded block action
+          does not necessarily represent the number of individual
+          blockers who jumped.
+        </li>
+
+        <li>
+          The dataset does not identify every physical jump made by
+          each athlete during a rally.
+        </li>
+
+      </ul>
+
+      Therefore, the results represent a study-defined action-exposure
+      estimate per team set, rather than a direct count of individual
+      athlete jumps.
+
     </div>
 
   </div>
@@ -521,7 +532,7 @@ footer p {
   <figure>
 
     <img
-      src="assets/UofC_All_Position_Comparisons.png"
+      src="../assets/UofC_All_Position_Comparisons.png"
       alt="University of Calgary position action exposure compared with Canada West"
       style="width:100%;height:auto;"
     >
@@ -560,7 +571,6 @@ footer p {
     <div class="table-wrap">
 
       <table>
-
         <thead>
           <tr>
             <th>Action</th>
@@ -570,37 +580,30 @@ footer p {
         </thead>
 
         <tbody>
-
           <tr>
             <td>Attack</td>
             <td class="num">1.72</td>
             <td class="num">1.36 <span class="delta below">−0.36</span></td>
           </tr>
-
           <tr>
             <td>Block</td>
             <td class="num">2.07</td>
             <td class="num">1.74 <span class="delta above">+0.33</span></td>
           </tr>
-
           <tr>
             <td>Serve</td>
             <td class="num">3.54</td>
             <td class="num">3.97 <span class="delta below">−0.43</span></td>
           </tr>
-
           <tr>
             <td>Set</td>
             <td class="num">23.94</td>
             <td class="num">25.84 <span class="delta below">−1.90</span></td>
           </tr>
-
         </tbody>
-
       </table>
 
     </div>
-
   </div>
 
   <!-- OUTSIDE HITTER -->
@@ -614,7 +617,6 @@ footer p {
     <div class="table-wrap">
 
       <table>
-
         <thead>
           <tr>
             <th>Action</th>
@@ -624,37 +626,30 @@ footer p {
         </thead>
 
         <tbody>
-
           <tr>
             <td>Attack</td>
             <td class="num">22.04</td>
             <td class="num">20.14 <span class="delta above">+1.90</span></td>
           </tr>
-
           <tr>
             <td>Block</td>
             <td class="num">4.38</td>
             <td class="num">4.31 <span class="delta above">+0.07</span></td>
           </tr>
-
           <tr>
             <td>Serve</td>
             <td class="num">11.18</td>
             <td class="num">9.57 <span class="delta above">+1.61</span></td>
           </tr>
-
           <tr>
             <td>Set</td>
             <td class="num">2.64</td>
             <td class="num">2.45 <span class="delta above">+0.19</span></td>
           </tr>
-
         </tbody>
-
       </table>
 
     </div>
-
   </div>
 
   <!-- MIDDLE BLOCKER -->
@@ -668,7 +663,6 @@ footer p {
     <div class="table-wrap">
 
       <table>
-
         <thead>
           <tr>
             <th>Action</th>
@@ -678,37 +672,30 @@ footer p {
         </thead>
 
         <tbody>
-
           <tr>
             <td>Attack</td>
             <td class="num">5.46</td>
             <td class="num">7.41 <span class="delta below">−1.95</span></td>
           </tr>
-
           <tr>
             <td>Block</td>
             <td class="num">4.96</td>
             <td class="num">6.03 <span class="delta below">−1.07</span></td>
           </tr>
-
           <tr>
             <td>Serve</td>
             <td class="num">5.03</td>
             <td class="num">6.13 <span class="delta below">−1.10</span></td>
           </tr>
-
           <tr>
             <td>Set</td>
             <td class="num">0.75</td>
             <td class="num">1.09 <span class="delta below">−0.34</span></td>
           </tr>
-
         </tbody>
-
       </table>
 
     </div>
-
   </div>
 
   <!-- LIBERO -->
@@ -722,7 +709,6 @@ footer p {
     <div class="table-wrap">
 
       <table>
-
         <thead>
           <tr>
             <th>Action</th>
@@ -732,49 +718,38 @@ footer p {
         </thead>
 
         <tbody>
-
           <tr>
             <td>Attack</td>
             <td class="num">0.00</td>
             <td class="num">0.03 <span class="delta below">−0.03</span></td>
           </tr>
-
           <tr>
             <td>Block</td>
             <td class="num">0.01</td>
             <td class="num">0.01 <span class="delta">≈0.00</span></td>
           </tr>
-
           <tr>
             <td>Serve</td>
             <td class="num">1.04</td>
             <td class="num">0.62 <span class="delta above">+0.42</span></td>
           </tr>
-
           <tr>
             <td>Set</td>
             <td class="num">3.25</td>
             <td class="num">2.44 <span class="delta above">+0.81</span></td>
           </tr>
-
         </tbody>
-
       </table>
 
     </div>
-
   </div>
 
 </div>
 
 <div class="benchmark-key">
-
   <span><i class="keydot"></i>Calgary value</span>
-
   <span><i class="keyline"></i>Pooled conference average</span>
-
   <span>Rates shown as actions per team set</span>
-
 </div>
 
 <p class="small">
@@ -807,38 +782,29 @@ footer p {
   <div class="method-steps">
 
     <div class="step">
-
       <h3>Collect</h3>
-
       <p>
         Parse the 140 regular-season DVW files and retain
         coded attack, block, serve and set actions.
       </p>
-
     </div>
 
     <div class="step">
-
       <h3>Assign Positions</h3>
-
       <p>
         Map athletes to Setter, Outside Hitter, Middle Blocker
         and Libero. Opposite/right-side roles are grouped
         with Outside Hitter for this analysis.
       </p>
-
     </div>
 
     <div class="step">
-
       <h3>Normalize</h3>
-
       <p>
         Calculate each team's action total for a position
         and action, then divide by that team's total
         sets played.
       </p>
-
     </div>
 
   </div>
@@ -866,46 +832,6 @@ footer p {
     </div>
 
   </div>
-
-</div>
-
-<!-- IMPORTANT DISTINCTION -->
-
-<div class="callout" style="margin-top:17px">
-
-  <strong>Important distinction – coded actions versus physical jumps:</strong>
-  This study assigns one jump-equivalent to each recorded Attack,
-  Block, Serve and Set action. However, these are coded volleyball
-  actions, not individually verified jumps.
-
-  <ul class="bullet-list">
-
-    <li>
-      An attack is counted once, whether the attacker jumps or
-      performs a standing attack.
-    </li>
-
-    <li>
-      A set is counted as one action, whether the setter jumps
-      to set or sets from a standing position.
-    </li>
-
-    <li>
-      When multiple blockers jump together, the coded block action
-      does not necessarily represent the number of individual
-      blockers who jumped.
-    </li>
-
-    <li>
-      The dataset does not identify every physical jump made by
-      each athlete during a rally.
-    </li>
-
-  </ul>
-
-  Therefore, the results represent a study-defined action-exposure
-  estimate per team set, rather than a direct count of individual
-  athlete jumps.
 
 </div>
 
@@ -996,7 +922,6 @@ footer p {
 </main>
 
 <footer>
-
 <div class="wrap">
 
   <p><b>UNIVERSITY OF CALGARY · DINOS</b></p>
@@ -1011,7 +936,6 @@ footer p {
   </p>
 
 </div>
-
 </footer>
 
 </body>
