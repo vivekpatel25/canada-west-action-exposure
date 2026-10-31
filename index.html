@@ -22,7 +22,6 @@
 }
 
 * { box-sizing:border-box; }
-
 html { scroll-behavior:smooth; }
 
 body {
@@ -107,7 +106,6 @@ nav a {
 }
 
 nav a:hover { color:var(--blue); }
-
 main { padding:35px 0 70px; }
 
 section {
@@ -188,7 +186,6 @@ h3 {
 .callout strong { color:#49351f; }
 
 figure { margin:0; }
-
 .chart-card { padding:17px; }
 
 .chart-card img {
@@ -360,6 +357,34 @@ tr:last-child td { border-bottom:0; }
 
 .metric:last-child { border:0; }
 
+.pdf-actions {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:15px;
+}
+
+.pdf-button {
+  display:inline-block;
+  padding:11px 18px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;
+  transition:opacity .2s ease;
+}
+
+.pdf-button:hover { opacity:.85; }
+
+.pdf-primary {
+  background:var(--navy);
+  color:white;
+}
+
+.pdf-secondary {
+  background:var(--pale);
+  color:var(--navy);
+}
+
 footer {
   background:#102f54;
   color:#d8e7f4;
@@ -404,7 +429,6 @@ footer p {
 <body>
 
 <!-- HERO -->
-
 <header class="hero">
 <div class="wrap">
 
@@ -432,7 +456,6 @@ footer p {
 </header>
 
 <!-- NAVIGATION -->
-
 <nav>
 <div class="navinner">
   <a href="#overview">Overview</a>
@@ -445,11 +468,9 @@ footer p {
 <main class="wrap">
 
 <!-- STUDY OVERVIEW -->
-
 <section id="overview">
 
 <div class="section-head">
-
   <div class="eyebrow">The Study</div>
 
   <h2>Understanding Position-Specific Workload Patterns</h2>
@@ -460,7 +481,6 @@ footer p {
     This common rate allows comparisons between teams that played
     different numbers of sets.
   </p>
-
 </div>
 
 <div class="grid">
@@ -487,7 +507,6 @@ footer p {
   </div>
 
   <div class="card span-12">
-
     <h3>How to Read the Comparisons</h3>
 
     <p>
@@ -498,24 +517,44 @@ footer p {
     </p>
 
     <div class="callout">
-      <strong>Study-defined jump/action estimate:</strong>
-      For the workload comparison below, each coded Attack, Block,
-      Serve and Set action is counted as one jump-equivalent action.
-      This is the study's operational assumption, not a directly
-      observed physical jump count.
-    </div>
+      <strong>Important distinction – coded actions versus physical jumps:</strong>
+      This study assigns one jump-equivalent to each recorded Attack,
+      Block, Serve and Set action. However, these are coded volleyball
+      actions, not individually verified jumps.
 
+      <ul class="bullet-list">
+        <li>
+          An attack is counted once, whether the attacker jumps
+          or performs a standing attack.
+        </li>
+        <li>
+          A set is counted as one action, whether the setter
+          jumps to set or sets from a standing position.
+        </li>
+        <li>
+          When multiple blockers jump together, the coded block action
+          does not necessarily represent the number of individual blockers
+          who jumped.
+        </li>
+        <li>
+          The dataset does not identify every physical jump made by each
+          athlete during a rally.
+        </li>
+      </ul>
+
+      Therefore, the results represent a study-defined action-exposure
+      estimate per team set, rather than a direct count of individual
+      athlete jumps.
+    </div>
   </div>
 
 </div>
 </section>
 
 <!-- CONFERENCE GRAPHS -->
-
 <section id="conference">
 
 <div class="section-head">
-
   <div class="eyebrow">Conference-Wide Results</div>
 
   <h2>How Action Exposure Differs by Position</h2>
@@ -525,13 +564,11 @@ footer p {
     attacking, blocking and serving. Positions are shown separately
     so each role can be interpreted in its own technical context.
   </p>
-
 </div>
 
 <div class="grid">
 
   <div class="card chart-card span-12">
-
     <div class="chart-title">
       <h3>Set Exposure</h3>
       <span class="tag">All 14 teams</span>
@@ -546,11 +583,9 @@ footer p {
         marked by the orange dashed line.
       </figcaption>
     </figure>
-
   </div>
 
   <div class="card chart-card span-12">
-
     <div class="chart-title">
       <h3>Attack Exposure</h3>
       <span class="tag">All 14 teams</span>
@@ -566,11 +601,9 @@ footer p {
         blocker rates vary across the conference.
       </figcaption>
     </figure>
-
   </div>
 
   <div class="card chart-card span-12">
-
     <div class="chart-title">
       <h3>Block Exposure</h3>
       <span class="tag">All 14 teams</span>
@@ -585,11 +618,9 @@ footer p {
         the highest coded block involvement.
       </figcaption>
     </figure>
-
   </div>
 
   <div class="card chart-card span-12">
-
     <div class="chart-title">
       <h3>Serve Exposure</h3>
       <span class="tag">All 14 teams</span>
@@ -604,18 +635,15 @@ footer p {
         generally, not only jump serves.
       </figcaption>
     </figure>
-
   </div>
 
 </div>
 </section>
 
 <!-- UNIVERSITY OF CALGARY -->
-
 <section id="dinos">
 
 <div class="section-head">
-
   <div class="eyebrow">University of Calgary · Dinos</div>
 
   <h2>Position-Specific Action Exposure</h2>
@@ -623,18 +651,14 @@ footer p {
   <p class="lead">
     The following comparison places the University of Calgary's
     position-specific action rates against the pooled Canada West
-    average. The charts provide an overview of Calgary's profile,
+    average. The chart provides an overview of Calgary's profile,
     followed by individual position comparisons.
   </p>
-
 </div>
 
-<!-- RESTORED U OF C PNG -->
-
+<!-- U OF C COMPARISON GRAPH -->
 <div class="card chart-card" style="margin-bottom:20px">
-
   <figure>
-
     <img
       src="assets/UofC_All_Position_Comparisons.png"
       alt="University of Calgary position action exposure compared with Canada West"
@@ -647,35 +671,50 @@ footer p {
       Calgary and the orange dashed line represents the conference
       benchmark.
     </figcaption>
-
   </figure>
+</div>
 
+<!-- PDF REPORT LINKS -->
+<div class="card" style="margin-bottom:20px">
+  <h3>University of Calgary – Position Action Exposure Report</h3>
+
+  <p>
+    A printable report presenting the Dinos' position-specific
+    action exposure, comparisons with Canada West, and study methodology.
+  </p>
+
+  <div class="pdf-actions">
+    <a href="reports/Dinos_Position_Action_Exposure.pdf"
+       target="_blank"
+       class="pdf-button pdf-primary">
+       View PDF
+    </a>
+
+    <a href="reports/Dinos_Position_Action_Exposure.pdf"
+       download
+       class="pdf-button pdf-secondary">
+       Download PDF
+    </a>
+  </div>
 </div>
 
 <div class="callout" style="margin-bottom:17px">
-
   <strong>Reading the tables:</strong>
   The Calgary column is the Dinos' actions per team set.
   The conference column is the pooled conference average.
   The difference indicates whether Calgary's coded action rate
   is above or below the conference benchmark.
-
 </div>
 
 <div class="position-grid">
 
   <!-- SETTER -->
-
   <div class="position-card">
-
     <h3>Setter</h3>
-
     <p>Calgary's setter action rates compared with Canada West.</p>
 
     <div class="table-wrap">
-
       <table>
-
         <thead>
           <tr>
             <th>Action</th>
@@ -685,7 +724,6 @@ footer p {
         </thead>
 
         <tbody>
-
           <tr>
             <td>Attack</td>
             <td class="num">1.72</td>
@@ -709,27 +747,18 @@ footer p {
             <td class="num">23.94</td>
             <td class="num">25.84 <span class="delta below">−1.90</span></td>
           </tr>
-
         </tbody>
-
       </table>
-
     </div>
-
   </div>
 
   <!-- OUTSIDE HITTER -->
-
   <div class="position-card">
-
     <h3>Outside Hitter</h3>
-
     <p>Calgary's outside hitter action rates compared with Canada West.</p>
 
     <div class="table-wrap">
-
       <table>
-
         <thead>
           <tr>
             <th>Action</th>
@@ -739,7 +768,6 @@ footer p {
         </thead>
 
         <tbody>
-
           <tr>
             <td>Attack</td>
             <td class="num">22.04</td>
@@ -763,27 +791,18 @@ footer p {
             <td class="num">2.64</td>
             <td class="num">2.45 <span class="delta above">+0.19</span></td>
           </tr>
-
         </tbody>
-
       </table>
-
     </div>
-
   </div>
 
   <!-- MIDDLE BLOCKER -->
-
   <div class="position-card">
-
     <h3>Middle Blocker</h3>
-
     <p>Calgary's middle blocker action rates compared with Canada West.</p>
 
     <div class="table-wrap">
-
       <table>
-
         <thead>
           <tr>
             <th>Action</th>
@@ -793,7 +812,6 @@ footer p {
         </thead>
 
         <tbody>
-
           <tr>
             <td>Attack</td>
             <td class="num">5.46</td>
@@ -817,27 +835,18 @@ footer p {
             <td class="num">0.75</td>
             <td class="num">1.09 <span class="delta below">−0.34</span></td>
           </tr>
-
         </tbody>
-
       </table>
-
     </div>
-
   </div>
 
   <!-- LIBERO -->
-
   <div class="position-card">
-
     <h3>Libero</h3>
-
     <p>Calgary's libero action rates compared with Canada West.</p>
 
     <div class="table-wrap">
-
       <table>
-
         <thead>
           <tr>
             <th>Action</th>
@@ -847,7 +856,6 @@ footer p {
         </thead>
 
         <tbody>
-
           <tr>
             <td>Attack</td>
             <td class="num">0.00</td>
@@ -871,25 +879,17 @@ footer p {
             <td class="num">3.25</td>
             <td class="num">2.44 <span class="delta above">+0.81</span></td>
           </tr>
-
         </tbody>
-
       </table>
-
     </div>
-
   </div>
 
 </div>
 
 <div class="benchmark-key">
-
   <span><i class="keydot"></i>Calgary value</span>
-
   <span><i class="keyline"></i>Pooled conference average</span>
-
   <span>Rates shown as actions per team set</span>
-
 </div>
 
 <p class="small">
@@ -900,11 +900,9 @@ footer p {
 </section>
 
 <!-- METHODOLOGY -->
-
 <section id="method">
 
 <div class="section-head">
-
   <div class="eyebrow">Data & Methodology</div>
 
   <h2>How the Estimate Was Built</h2>
@@ -914,7 +912,6 @@ footer p {
     in 140 Canada West DVW files. Team rates use each team's
     total sets played as the denominator.
   </p>
-
 </div>
 
 <div class="card">
@@ -922,38 +919,29 @@ footer p {
   <div class="method-steps">
 
     <div class="step">
-
       <h3>Collect</h3>
-
       <p>
         Parse the 140 regular-season DVW files and retain
         coded attack, block, serve and set actions.
       </p>
-
     </div>
 
     <div class="step">
-
       <h3>Assign Positions</h3>
-
       <p>
         Map athletes to Setter, Outside Hitter, Middle Blocker
         and Libero. Opposite/right-side roles are grouped
         with Outside Hitter for this analysis.
       </p>
-
     </div>
 
     <div class="step">
-
       <h3>Normalize</h3>
-
       <p>
         Calculate each team's action total for a position
         and action, then divide by that team's total
         sets played.
       </p>
-
     </div>
 
   </div>
@@ -981,11 +969,9 @@ footer p {
     </div>
 
   </div>
-
 </div>
 
 <div class="card" style="margin-top:17px">
-
   <h3>Interpretation and Limitations</h3>
 
   <ul class="bullet-list">
@@ -998,17 +984,36 @@ footer p {
     </li>
 
     <li>
-      <b>Not verified physical jumps:</b>
-      The DVW action codes do not confirm that every attack
-      or block involved a jump, that a set was a jump set,
-      or that a serve was a jump serve.
+      <b>Attack actions:</b>
+      The dataset records an attack action, but does not confirm
+      whether the attacker jumped or performed a standing attack.
+      Both are counted once under this study's assumption.
+    </li>
+
+    <li>
+      <b>Setting actions:</b>
+      A coded Set action is counted once whether the setter
+      performs a jump set or a standing set. The dataset does
+      not reliably distinguish these physical techniques.
     </li>
 
     <li>
       <b>Block participation:</b>
-      One coded block action may involve multiple blockers;
-      the data do not establish how many athletes jumped
-      on each play.
+      A single coded block action may involve multiple blockers.
+      The data do not establish how many individual athletes
+      jumped on that play.
+    </li>
+
+    <li>
+      <b>Serving actions:</b>
+      The general Serve category includes coded serves and does
+      not mean every serve was a jump serve.
+    </li>
+
+    <li>
+      <b>Not verified physical jumps:</b>
+      DVW action codes do not capture every physical jump made
+      by every athlete during a rally.
     </li>
 
     <li>
@@ -1024,26 +1029,22 @@ footer p {
     </li>
 
   </ul>
-
 </div>
 
 <div class="callout" style="margin-top:17px">
-
   <strong>Recommended wording:</strong>
   “Estimated jump/action exposure per team set, using all four
   coded action classes as one jump-equivalent event each.”
+
   This makes the study's counting assumption explicit while
   avoiding a claim that the DVW files directly measured
-  physical jumps.
-
+  individual physical jumps.
 </div>
 
 </section>
 
 <!-- CONCLUSION -->
-
 <section>
-
 <div class="card">
 
   <h2>Conclusion</h2>
@@ -1064,13 +1065,11 @@ footer p {
   </p>
 
 </div>
-
 </section>
 
 </main>
 
 <footer>
-
 <div class="wrap">
 
   <p><b>CANADA WEST · POSITION ACTION EXPOSURE</b></p>
@@ -1085,7 +1084,6 @@ footer p {
   </p>
 
 </div>
-
 </footer>
 
 </body>
